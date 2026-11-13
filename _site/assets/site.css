@@ -1,11 +1,7 @@
 
-/* =========================================================
-   PALETTE - injected by build.js from the art direction and the
-   client's site.config.js palette. Only the colour tokens are used by
-   this layout; its type and geometry are fixed below.
-   ========================================================= */
+
 :root{
-  /* --- palette: derived from the client logo --- */
+
   --brand:#C8964A;        --brand-rgb:200,150,74;
   --brand-lt:#E2B871;
   --brand-dp:#A0742F;
@@ -15,19 +11,16 @@
   --gold:#D9A84E;
   --on-brand2:#1D0E02;
 
-  /* --- dark ground --- */
   --ink:#0D1F32;          --ink-rgb:13,31,50;
   --ink-1:#132940;
   --ink-2:#1B344F;
   --ink-deep:#081522;     --ink-deep-rgb:8,21,34;
 
-  /* --- text on the dark ground --- */
   --on-ink:#E9EEF0;
   --on-ink-2:#CDD6DA;
   --on-ink-muted:#93A0A6;
   --on-ink-faint:#6F7C82;
 
-  /* --- text on always-white review cards --- */
   --on-paper:#131A1D;
   --on-paper-2:#3A464C;
   --on-paper-muted:#5D6A70;
@@ -36,32 +29,26 @@
   --star-muted:#AFB9BD;
   --dot-idle:#BEC7CB;
 
-  /* --- the areas band --- */
   --band-bg:#0B1A2B;
   --band-g1:#121E20;
   --band-g2:#1E1610;
   --chip-core-bg:#1B2A2C;
 
-  /* --- hero rhythm: logo leads, headline supports (Redline / Fairmont) --- */
   --hero-logo:clamp(210px,31vw,380px);
   --hero-logo-sm:min(66vw,260px);
   --hero-logo-gap:14px;
   --hero-logo-gap-sm:10px;
   --hero-h1:clamp(25px,4.3vw,43px);
   --hero-sub:clamp(14px,2.1vw,16.5px);
-  /* The areas band scrim. Sits over .areas-bg, the section photograph, so every
-     layer stays translucent. The geometry matches the band gradient the section
-     used before it carried a picture, so the look is continuous. */
+
   --areas-scrim:radial-gradient(72% 100% at 10% 50%,rgba(var(--brand-rgb),.34),transparent 62%),radial-gradient(72% 100% at 92% 42%,rgba(var(--brand2-rgb),.26),transparent 60%),linear-gradient(115deg,rgba(var(--ink-rgb),.90) 0%,rgba(var(--ink-deep-rgb),.74) 50%,rgba(var(--ink-rgb),.82) 100%);
-  /* Stacked below 860px the copy runs the full width, so darken evenly. */
+
   --areas-scrim-sm:radial-gradient(90% 60% at 20% 20%,rgba(var(--brand-rgb),.30),transparent 64%),linear-gradient(180deg,rgba(var(--ink-rgb),.90) 0%,rgba(var(--ink-deep-rgb),.84) 58%,rgba(var(--ink-rgb),.88) 100%);
   --cta-scrim:linear-gradient(135deg,rgba(var(--brand-rgb),.55),rgba(var(--ink-rgb),.68) 52%,rgba(var(--brand2-rgb),.5)),rgba(var(--ink-rgb),.34);
 
-  /* --- type --- */
   --font-display:"Space Grotesk",Inter,system-ui,sans-serif;
   --font-body:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
 
-  /* --- geometry: the crispest of the four --- */
   --r:6px;
   --r-lg:10px;
   --wrap:1160px;
@@ -134,21 +121,6 @@
   --ghost-line:rgba(255,255,255,.26);
 }
 
-
-/* =========================================================
-   site-kit HOLT LAYOUT (default for new demos since 2026-10-20)
-   The Holt Roofing reference build (Jay: "the nicest site we've ever done together"),
-   generalised so any client's logo colours drive it. Proven first on Electricians Cotswold
-   in navy and gold. Copied into each project as _src/template.html by scaffold.js.
-
-   Colour comes from the direction tokens:
-     --ink / --ink-1 / --ink-2 / --ink-deep   dark sections, nav, footer
-     --brand        accent fills: primary buttons, icon chips, core chip
-     --brand-lt     accent text on dark: eyebrows, stats, links
-     --gold         stars, pins, badge dots
-     ON_BRAND token text ON a --brand fill: #fff for dark brands, the ink for light
-                    ones (gold, yellow, lime). Set in site.config.js tokens.
-   ========================================================= */
 :root{
   --paper:#ffffff; --paper-2:#F3F4F6; --paper-3:#E7EAEE;
   --line:#E2E6EA;
@@ -160,7 +132,7 @@
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   --display:'Archivo',var(--sans);
   --font-display:var(--display); --font-body:var(--sans);
-  /* defaults the kit's rendered pieces (accreditations, community, map) read */
+
   --fg:var(--ink); --fg-muted:var(--muted);
   --card:var(--paper-2); --card-line:var(--line); --card-line-hi:#C6CED7;
   --accent:var(--brand-dp); --sh:0 12px 30px -24px rgba(var(--ink-rgb),.4); --sh-lg:0 22px 50px -26px rgba(var(--ink-rgb),.5);
@@ -184,13 +156,12 @@ h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.01em}
 .pad,.sec{padding:84px 0}
 .logo-img{display:block;background:center/contain no-repeat}
 .ph{display:inline-block;font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:#FFE08A;color:#4A3A00;border-radius:5px;padding:2px 7px;vertical-align:middle}
-/* the kit's rendered sections (accreditations band, strip) use .s-dark / .s-tint */
+
 .s-dark{background:var(--ink);color:#fff;--fg:#fff;--fg-muted:var(--on-ink-2);--card:rgba(255,255,255,.06);--card-line:rgba(255,255,255,.14);--card-line-hi:rgba(255,255,255,.32);--accent:var(--brand-lt);--sh:none;--sh-lg:0 22px 50px -26px rgba(0,0,0,.6)}
 .s-dark .title{color:#fff}
 .s-dark .lede{color:var(--on-ink-2)}
 .s-tint{background:var(--paper-2);--fg:var(--ink);--fg-muted:var(--muted);--card:#fff}
 
-/* buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:.02em;padding:14px 26px;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,background .2s ease,color .2s ease,border-color .2s ease,filter .2s ease;text-transform:uppercase}
 .btn svg{width:18px;height:18px}
 .btn:active{transform:translateY(1px)}
@@ -205,7 +176,6 @@ h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.01em}
 .btn-wa{background:var(--wa);color:#fff}
 .btn-wa:hover{filter:brightness(.95)}
 
-/* ===== NAVBAR ===== */
 header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:1px solid var(--ink-deep)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
@@ -226,12 +196,8 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .mobile-menu a{font-family:var(--display);font-weight:700;font-size:1.4rem;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);text-transform:uppercase}
 .mobile-menu .btn{margin-top:18px;justify-content:center;font-size:1rem;border-bottom:0;color:var(--on-brand)}
 
-/* ===== HERO ===== */
 .hero{position:relative;height:min(88vh,760px);min-height:520px;overflow:hidden;background:var(--ink)}
-/* clips in sequence. Only the INCOMING clip fades (0 to 1) on top of the outgoing, which stays
-   fully opaque underneath: fading both dips the picture dark mid-transition. .top (incoming)
-   must sit strictly above .under (outgoing) or the wrap back to clip 1 cuts. No clips? Use
-   .hero-slide photographs instead and the script fades between them. */
+
 .hero-media{position:absolute;inset:0;z-index:0;background:var(--ink) center/cover no-repeat}
 .hero-clip{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;z-index:0;transition:opacity .9s ease}
 .hero-clip.under{opacity:1;z-index:1}
@@ -251,18 +217,16 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .hero p.sub{color:var(--on-ink-2);font-size:clamp(1.02rem,2.2vw,1.18rem);margin:14px auto 32px;max-width:54ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
-/* ===== TRUST BAR ===== */
 .trust{background:var(--ink-1);border-top:1px solid var(--ink-deep)}
 .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:26px 0}
 .trust-item{display:flex;align-items:center;gap:13px;color:#fff;justify-content:center}
 .trust-item svg{width:26px;height:26px;color:var(--brand-lt);flex:none}
 .trust-item .t-main,.trust-item > b{font-family:var(--display);font-weight:700;font-size:.98rem;line-height:1.15}
 .trust-item .t-sub,.trust-item > span{font-size:.74rem;color:var(--muted-light);letter-spacing:.04em}
-/* the fourth item comes from the kit (ACCRED_TRUST marker): svg, b and span as siblings */
+
 .trust-item:has(> b){display:grid;grid-template-columns:auto auto;column-gap:13px;justify-content:center;align-items:center}
 .trust-item:has(> b) > svg{grid-row:span 2}
 
-/* ===== SERVICES ===== */
 .services{background:var(--paper)}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 .svc-photo{position:relative;overflow:hidden;border-radius:16px;background:var(--ink);min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;box-shadow:0 16px 40px -26px rgba(var(--ink-rgb),.55);transition:transform .3s ease,box-shadow .3s ease}
@@ -285,7 +249,6 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .soon-toast{position:fixed;left:50%;bottom:26px;z-index:150;transform:translate(-50%,16px);max-width:calc(100% - 32px);background:var(--ink);color:#fff;font-size:.92rem;padding:13px 20px;border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
 .soon-toast.show{opacity:1;transform:translate(-50%,0)}
 
-/* ===== BEFORE AND AFTER: three cases, videos tilted, slider flat ===== */
 .ba{background:var(--paper-2)}
 .ba-cases{display:flex;flex-direction:column;gap:74px;margin-top:60px}
 .case{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
@@ -315,7 +278,6 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .ba-slider:has(.ba-range:focus-visible) .ba-knob{outline:3px solid var(--brand);outline-offset:2px}
 .ba-hint{font-size:.88rem!important;color:var(--muted);font-style:italic}
 
-/* ===== GALLERY: six-tile bento, every photo in the lightbox ===== */
 .gallery{background:var(--paper)}
 .gal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:230px;gap:12px;grid-auto-flow:dense;margin-top:46px}
 .gal-item{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;background:var(--paper-3);box-shadow:0 14px 34px -24px rgba(var(--ink-rgb),.5)}
@@ -341,10 +303,8 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .lb-nav svg{width:26px;height:26px}
 .lb-prev{left:18px}.lb-next{right:18px}
 
-/* ===== WHY CHOOSE US: dark, two columns, five points and a photograph ===== */
 .why{background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
-/* a photograph behind the section (Jay, 2026-10-20): the wash is heavy on the text side and thins
-   behind the 4:3 photo so the picture shows; even and lighter top to bottom once stacked */
+
 .why-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
 .why-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(var(--ink-rgb),.92) 0%,rgba(var(--ink-rgb),.74) 48%,rgba(var(--ink-rgb),.42) 100%)}
 .why .h-sec{color:#fff}
@@ -360,7 +320,6 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .why-photo{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 70px -30px rgba(0,0,0,.7)}
 .why-photo img{width:100%;height:100%;object-fit:cover}
 
-/* ===== REVIEWS ===== */
 .reviews{background:var(--paper-2)}
 .rev-score{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
 .rev-sc{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px 18px 12px 14px;box-shadow:0 12px 30px -24px rgba(var(--ink-rgb),.4);text-align:left;transition:transform .2s,border-color .2s}
@@ -395,9 +354,6 @@ a.rev-sc:hover{transform:translateY(-2px);border-color:var(--card-line-hi)}
 .rev-dots button{width:9px;height:9px;border-radius:50%;border:0;background:#C9D0D8;cursor:pointer;transition:.25s}
 .rev-dots button.active{background:var(--ink);width:26px;border-radius:5px}
 
-/* ===== ACCREDITATIONS =====
-   Rendered by engine/accreditations.js (ACCREDITATIONS marker); these rules bring its cards into
-   this layout. Always give it accreditationsPhoto (Jay, 2026-10-20: looks best over a photo). */
 .acc .acc-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);padding:32px 24px 26px}
 .acc .acc-card:hover{border-color:rgba(var(--brand-rgb),.6);background:rgba(255,255,255,.09)}
 .acc .acc-card h3{font-size:1.4rem;font-weight:800;color:#fff}
@@ -406,7 +362,6 @@ a.rev-sc:hover{transform:translateY(-2px);border-color:var(--card-line-hi)}
 .acc .acc-link{color:#fff}
 .acc-strip{border-bottom:1px solid var(--line)}
 
-/* ===== ABOUT ===== */
 .about{background:var(--paper)}
 .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}
 .about-photo{position:relative;aspect-ratio:4/3}
@@ -417,7 +372,6 @@ a.rev-sc:hover{transform:translateY(-2px);border-color:var(--card-line-hi)}
 .about .sig{font-family:var(--display);font-weight:800;font-size:1.15rem;margin-top:8px}
 .about .sig small{display:block;font-family:var(--sans);font-weight:500;font-size:.85rem;color:var(--muted);letter-spacing:.02em}
 
-/* ===== AREAS ===== */
 .areas{position:relative;overflow:hidden;isolation:isolate;background:var(--ink);color:#fff}
 .areas-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
 .areas-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(var(--ink-rgb),.95) 0%,rgba(var(--ink-rgb),.86) 45%,rgba(var(--ink-rgb),.66) 100%)}
@@ -431,7 +385,6 @@ a.rev-sc:hover{transform:translateY(-2px);border-color:var(--card-line-hi)}
 .chip.core svg{color:var(--on-brand)}
 .chip.map-on:not(.core){background:rgba(var(--brand-rgb),.18);border-color:rgba(var(--brand-rgb),.6)}
 
-/* ===== CONTACT ===== */
 .contact{background:var(--paper-2)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:50px}
 .contact-info .lead{margin-top:16px}
@@ -458,7 +411,6 @@ a.rev-sc:hover{transform:translateY(-2px);border-color:var(--card-line-hi)}
 .form-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:14px;display:flex;align-items:center;justify-content:center;gap:7px}
 .form-note svg{width:15px;height:15px;color:var(--wa)}
 
-/* ===== FINAL CTA ===== */
 .final-cta{position:relative;background-size:cover;background-position:center;color:#fff;text-align:center}
 .final-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--ink-rgb),.80),rgba(var(--ink-deep-rgb),.9))}
 .final-cta .wrap{position:relative;z-index:2;padding:96px 22px}
@@ -466,7 +418,6 @@ a.rev-sc:hover{transform:translateY(-2px);border-color:var(--card-line-hi)}
 .final-cta p{color:var(--on-ink-2);max-width:48ch;margin:0 auto 30px;font-size:1.08rem}
 .final-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
-/* ===== FOOTER ===== */
 footer{background:var(--ink-deep);color:var(--on-ink-muted);padding:64px 0 0}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:42px}
 .foot-brand .logo-img{width:var(--foot-logo-w,210px);height:63px;margin-bottom:18px;background-position:left center}
@@ -485,13 +436,11 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
 .foot-demo{font-size:.74rem;color:var(--on-ink-faint);text-align:center;padding:0 0 22px}
 .foot-pad{height:12px}
 
-/* ===== FLOATING WHATSAPP ===== */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;background:var(--wa);color:#fff;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
 .wa-float svg{width:30px;height:30px;margin:14px}
 .wa-float .wa-label{font-family:var(--display);font-weight:700;font-size:.92rem;white-space:nowrap;max-width:0;overflow:hidden;transition:max-width .3s,margin .3s}
 .wa-float:hover .wa-label{max-width:160px;margin-right:20px}
 
-/* ===== RESPONSIVE ===== */
 @media(max-width:1024px){.rev-cell{flex-basis:50%}.foot-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:960px){
   .gal-grid{grid-auto-rows:190px}
@@ -534,7 +483,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   .t-big .gal-cap{padding:14px 16px;font-size:1.08rem}
   .chips{gap:7px}
   .chip{padding:9px 13px;font-size:.8rem}
-  /* services stay 2-up as compact photo tiles; the sentence is dropped rather than clamped mid-word */
+
   .svc-grid{gap:9px;margin-top:34px}
   .svc-photo{min-height:210px;border-radius:12px}
   .svc-body{padding:13px 12px}
@@ -543,7 +492,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   .svc-photo h3{font-size:.95rem;line-height:1.18;margin-bottom:4px}
   .svc-photo p{display:none}
   .svc-go{margin-top:8px;font-size:.8rem}
-  /* review scores: two by two on phones; the " on Google" tail of each label (.lbl-x) drops, the logo says it */
+
   .rev-score{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
   .rev-sc{padding:11px 10px;gap:9px;min-width:0;border-radius:12px}
   .rev-sc .rev-logo{width:30px;height:30px}
@@ -558,20 +507,27 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   .call-pill .num{font-size:.86rem}
   .brand .logo-img{width:128px;height:38px}
 }
-/* scroll reveals (added by script, removed once shown) */
+@media(max-width:400px){
+  .nav-inner{gap:10px}
+  .nav-cta{gap:6px}
+  .brand .logo-img{width:112px;height:34px}
+  .call-pill{padding:9px 11px}
+  .call-pill svg{display:none}
+  .call-pill .num{white-space:nowrap}
+}
+
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--rv-d,0s),transform .8s cubic-bezier(.22,1,.36,1) var(--rv-d,0s)}
 .rv.in{opacity:1;transform:none}
 .rv.rv-pre{transition:none!important}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  /* reveals stay a gentle fade, with no movement */
+
   .rv{transform:none!important;transition:opacity .6s ease var(--rv-d,0s)!important}
-  /* keep the hero crossfade gentle rather than a hard cut (Jay's own browser reports reduce) */
+
   .hero-clip{transition:opacity .9s ease!important}
   .hero-slide{transition:opacity 1.2s ease!important}
   .map-base::after{animation:mapPulse 2.4s ease-out infinite!important}
 }
-
 
 blockquote footer{background:none;padding:0}
 .page-head{padding:calc(74px + 64px) 0 64px;background:linear-gradient(90deg,rgba(var(--ink-rgb),.93) 0%,rgba(var(--ink-rgb),.8) 50%,rgba(var(--ink-rgb),.55) 100%),var(--ink) url('page-hero.webp') center 40%/cover;color:#fff;position:relative}

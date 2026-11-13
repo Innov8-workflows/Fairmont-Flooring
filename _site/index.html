@@ -524,6 +524,14 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   .call-pill .num{font-size:.86rem}
   .brand .logo-img{width:128px;height:38px}
 }
+@media(max-width:400px){
+  .nav-inner{gap:10px}
+  .nav-cta{gap:6px}
+  .brand .logo-img{width:112px;height:34px}
+  .call-pill{padding:9px 11px}
+  .call-pill svg{display:none}
+  .call-pill .num{white-space:nowrap}
+}
 
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--rv-d,0s),transform .8s cubic-bezier(.22,1,.36,1) var(--rv-d,0s)}
 .rv.in{opacity:1;transform:none}
