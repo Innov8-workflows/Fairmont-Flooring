@@ -453,6 +453,8 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
 .foot-demo{font-size:.74rem;color:var(--on-ink-faint);text-align:center;padding:0 0 22px}
 .foot-pad{height:12px}
 
+.hp-field{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;background:var(--wa);color:#fff;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
 .wa-float svg{width:30px;height:30px;margin:14px}
 .wa-float .wa-label{font-family:var(--display);font-weight:700;font-size:.92rem;white-space:nowrap;max-width:0;overflow:hidden;transition:max-width .3s,margin .3s}
@@ -907,6 +909,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       </div>
     </div>
     <form class="form" id="quoteForm" novalidate>
+      <div class="hp-field" aria-hidden="true"><label for="cf-hp">Leave this empty</label><input id="cf-hp" name="botcheck" type="text" tabindex="-1" autocomplete="off"></div>
       <h3>Send us a message</h3>
       <p class="fsub">Fill this in and it'll open WhatsApp with your details ready to send.</p>
       <div class="f2">
@@ -932,7 +935,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       </button>
       <p class="form-note">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-        No spam. Nothing is sent until you press send in WhatsApp.
+        No spam. Your details are only used to reply to your enquiry.
       </p>
     </form>
   </div>

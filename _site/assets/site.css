@@ -436,6 +436,8 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
 .foot-demo{font-size:.74rem;color:var(--on-ink-faint);text-align:center;padding:0 0 22px}
 .foot-pad{height:12px}
 
+.hp-field{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;background:var(--wa);color:#fff;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
 .wa-float svg{width:30px;height:30px;margin:14px}
 .wa-float .wa-label{font-family:var(--display);font-weight:700;font-size:.92rem;white-space:nowrap;max-width:0;overflow:hidden;transition:max-width .3s,margin .3s}
