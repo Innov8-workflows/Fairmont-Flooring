@@ -66,7 +66,7 @@ if(document.querySelector("#quoteForm")){
       setTimeout(function(){ bad.style.borderColor = ""; }, 2200);
       return;
     }
-    var lines = ["Hi Sean, I found you on your website and would like a quote.", "", "Name: " + v("name"), "Phone: " + v("phone")];
+    var lines = ["Hi Sean, I found you on the Fairmont Flooring website (fairmontflooring.co.uk) and would like a quote.", "", "Name: " + v("name"), "Phone: " + v("phone")];
     if (v("service")) lines.push("Service: " + v("service"));
     if (v("detail")) lines.push("Details: " + v("detail"));
     var url = "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
